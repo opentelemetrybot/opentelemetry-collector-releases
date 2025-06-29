@@ -25,6 +25,9 @@ env:
   # renovate: datasource=github-tags depName=goreleaser-pro packageName=goreleaser/goreleaser-pro
   GORELEASER_PRO_VERSION: v2.7.0
 
+permissions:
+  contents: read
+
 jobs:
   check-goreleaser:
     runs-on: ubuntu-latest

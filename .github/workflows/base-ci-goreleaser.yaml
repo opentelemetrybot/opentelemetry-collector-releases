@@ -32,6 +32,9 @@ env:
   # renovate: datasource=github-tags depName=goreleaser-pro packageName=goreleaser/goreleaser-pro
   GORELEASER_PRO_VERSION: v2.7.0
 
+permissions:
+  contents: read
+
 jobs:
   check-goreleaser:
     strategy:
@@ -56,6 +59,8 @@ jobs:
           - GOOS: windows
             GOARCH: ppc64le
     runs-on: ubuntu-24.04
+    permissions:
+      actions: read
     outputs:
       version: ${{ steps.prep.outputs.version }}
 
