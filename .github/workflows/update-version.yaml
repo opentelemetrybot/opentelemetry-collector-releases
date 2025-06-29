@@ -14,10 +14,8 @@ on:
         description: 'Collector core stable module set version to update to. Leave empty to bump to next minor version (e.g. 1.26.0 -> 1.27.0)'
         required: false
         default: ''
-
 permissions:
   contents: read
-
 jobs:
   update-version:
     runs-on: ubuntu-24.04
