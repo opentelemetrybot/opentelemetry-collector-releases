@@ -15,6 +15,9 @@ on:
         default: false
         description: "Set to true if a GH issue should be generated upon failure"
 
+permissions:
+  contents: read
+
 jobs:
   package-tests:
     name: Package Tests
@@ -39,6 +42,8 @@ jobs:
     runs-on: ubuntu-22.04
     needs: [package-tests]
     if: failure() && inputs.issue-on-failure == 'true'
+    permissions:
+      issues: write
     steps:
       - name: Formulate issue
         id: formulate_issue
