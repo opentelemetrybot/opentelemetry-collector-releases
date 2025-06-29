@@ -1,4 +1,5 @@
 name: Update Version in Distributions and Prepare PR
+
 on:
   workflow_dispatch:
     inputs:
@@ -15,9 +16,15 @@ on:
         required: false
         default: ''
 
+permissions:
+  contents: read
+
 jobs:
   update-version:
     runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+      pull-requests: write
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
