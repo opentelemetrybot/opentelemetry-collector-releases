@@ -42,6 +42,8 @@ jobs:
     runs-on: ubuntu-22.04
     needs: [package-tests]
     if: failure() && inputs.issue-on-failure == 'true'
+    permissions:
+      issues: write
     steps:
       - name: Formulate issue
         id: formulate_issue
