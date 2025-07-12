@@ -21,6 +21,9 @@ permissions:
 jobs:
   update-version:
     runs-on: ubuntu-24.04
+    permissions:
+      contents: write # required for pushing commits
+      pull-requests: write # required for creating pull requests
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
