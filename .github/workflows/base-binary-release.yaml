@@ -22,6 +22,9 @@ on:
         default: false
         description: "Set to true if the binary needs a Windows MSI to be built"
 
+permissions:
+  contents: read
+
 env:
   # renovate: datasource=github-releases packageName=goreleaser/goreleaser-pro
   GORELEASER_PRO_VERSION: v2.17.1

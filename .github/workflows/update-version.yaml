@@ -5,6 +5,9 @@ on:
 permissions:
   contents: read
 
+permissions:
+  contents: read
+
 jobs:
   update-version:
     runs-on: ubuntu-24.04
