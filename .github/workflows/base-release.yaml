@@ -28,6 +28,9 @@ on:
 permissions:
   contents: read
 
+permissions:
+  contents: read
+
 env:
   # renovate: datasource=github-releases packageName=goreleaser/goreleaser-pro
   GORELEASER_PRO_VERSION: v2.18.1
